@@ -2,7 +2,6 @@ const { ipcRenderer } = require("electron");
 
 // Uses 4gb of memory
 function printToPDF() {
-  const jobID = Math.random();
   ipcRenderer.send("print", {
     type: "pdf",
     file: "./markup.html"
@@ -10,7 +9,6 @@ function printToPDF() {
 }
 
 function print() {
-  const jobID = Math.random();
   ipcRenderer.send("print", {
     type: "printer",
     file: "./markup.html"
